@@ -1,0 +1,507 @@
+/*$mainfontsize: 3;
+$s:1em;*/
+
+.bld {
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.circledNumber {
+  font-size: 1.4em;
+}
+
+.lineIntableCell {
+  border-bottom: 3px solid black;
+}
+
+/**** Formatted input ****/
+body {
+  font-size: 0.6em;
+  /*--main-font-size: #{$mainfontsize}em;
+  font-size: var(--main-font-size);*/
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #F7F8F9;
+  /*color: #fff;*/
+  font-family: "Muli", sans-serif;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.form-group {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-group-container {
+  width: 20%;
+}
+
+/* label */
+div.form-group label {
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+
+div.form-group input,
+div.form-group textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+div.form-group input,
+div.form-group span,
+div.form-group textarea {
+  /*font-size: 24px;*/
+  font-family: "Arial", sans-serif;
+  padding: 4px;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+}
+
+
+
+div.form-group label:focus-within {
+  border-color: blue;
+}
+
+div.form-group span,
+div.form-group label input:not(:placeholder-shown)+span,
+div.form-group label textarea:not(:placeholder-shown)+span {
+  /*font-size: 22px;*/
+  background-color: white;
+  padding: 0 4px;
+  color: black;
+
+}
+
+/*div.form-group>span {*/
+
+  /*--main-font-size: #{$mainfontsize}em;
+  font-size: calc(var(--main-font-size)*2);
+  font-size: calc(var(--s)*2);*/
+  /*--s:#{$s};*/
+  /*font-size:var(--s);*/
+
+
+  /*background-color: rgb(255, 0, 170);*/
+
+/*}*/
+
+div.form-group input {
+  background-color: lightblue;
+  border: 0.5rem outset pink;
+  border-radius: 12px;
+  font: bold 0.8rem sans-serif;
+  padding: 0.3rem;
+}
+
+/********************************/
+
+/*TOOLTIP*/
+.tooltip {
+  display: inline-block;
+  position: relative;
+  /*border-bottom:1px dotted #666;*/
+  text-align: left;
+}
+
+tr .tooltip {
+  display: block;
+}
+
+.tooltip .right {
+  min-width: 480px;
+  top: 50%;
+  left: 100%;
+  margin-left: 20px;
+  transform: translate(0, -50%);
+  padding: 10px 20px;
+  color: #444444;
+  background-color: #EEEEEE;
+  font-weight: normal;
+  font-size: 1.4em;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 99999999;
+  box-sizing: border-box;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.tooltip:hover .right {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .right i {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -12px;
+  width: 12px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.tooltip .right i::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 0;
+  top: 50%;
+  transform: translate(50%, -50%) rotate(-45deg);
+  background-color: #EEEEEE;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+#tablePricesSuperContainer {
+  /*background-color: antiquewhite;*/
+  display: inline-flex;  
+  /*display: inline flow-root list-item;*/
+  background-color: steelblue;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x:auto;
+}
+
+.tablePrices {
+  background-color: antiquewhite;
+  /*width: 100%;*/
+  max-width: 100%;
+  white-space:nowrap;
+}
+
+.captionsTable0,
+.captionsTable,
+.tablePrices1 th {
+  font-size: 1.2em;
+}
+
+table td {
+  border: 1px inset rgb(0, 0, 0);
+  /*height: 100%;*/
+}
+
+/*.entry-title {*/
+  /*text-align: center;*/
+  /*font-size: 3em;*/
+  /*padding: 1% 7% 1% 7%;*/
+/*}*/
+
+
+.grid-container {
+  float: left;
+  /*display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;*/
+  /*border: 2px solid rgb(10, 63, 160);*/
+  /*border-radius: 12px;*/
+  /*width: 29%;*/
+  /*padding: 8px;*/
+
+  /*border: 0.5rem outset pink;*/
+  /*border: 0.5rem outset rgb(151, 151, 151);*/
+  
+
+  /*box-shadow: 0 0 0 2rem skyblue;*/
+  /*border-radius: 12px;*/
+  font: bold 0.8rem sans-serif;
+  /*margin: 2rem;*/
+  /*padding: 0.5rem;*/
+  /*outline-offset: 0.5rem;*/
+}
+
+.grid-child {
+  float: left;
+}
+
+/*#SecColFiRow {*/
+  /*width: 70%;;*/
+/*}*/
+
+/*.mycolumn {*/
+  /*display: block;*/
+/*}*/
+
+table {
+  /*float: left;*/
+  width: auto;
+}
+/*
+.hiddenTable {
+  float: left;
+  display: inline-block;
+}*/
+
+/*
+.hiddenTable td:nth-child(1) {
+  display: none;
+}*/
+
+
+
+.tablePricesContainer {
+  float: left;
+}
+
+.hidden, .tablePrices.firstColumnHidden td:nth-child(1){
+  display: none;
+}
+
+table tr:nth-child(26) td{
+  background: #ff54005e;
+  font-size: 1.2em;
+  font-weight: bolder;
+  /* Last row and table header both will be selected */
+}
+
+@media all and (max-width:758px) {
+
+
+  /*
+  .hiddenTable {
+    clear: left;
+
+  }*/
+
+
+  .tablePrices.firstColumnHidden td:nth-child(1) {
+    display: revert;
+  }
+
+  .tablePricesContainer{
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+    /* OR auto????*/
+    /*clear: left;*/
+    margin-bottom: 10px;
+    border-bottom: 2px solid blue;
+  }
+
+  #tablePricesSuperContainer {
+     display: inline flow-root list-item;
+  }
+
+  table td{
+    white-space: break-spaces;
+  }
+  .grid-child {
+    width: 100%;
+  }
+
+  body > div:nth-child(1){
+    /*display: none!important;
+    height: 1px !important;*/
+
+  }
+  /*
+  td {
+    display: block;
+    width: 100%;
+  }
+  tr {
+    display: block;
+    margin-bottom: 30px;
+  }
+  tr tr {
+    margin-bottom: 0;
+  }*/
+}
+
+/**************************** TABLE *****************************/
+/*
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  */
+/*table td::before {*/
+  /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+  /*
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+    */
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* general styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+
+
+/*************************** TABLE END ***************************/
+
+
+
+/****************** GLOW ************************/
+
+/* .mytable tbody tr:nth-child(25) td:nth-child(5) */
+
+#tablePrices1 tr:nth-child(26) td:nth-child(2) {
+  outline: none;
+    
+  position: relative;
+  z-index: 0;
+  /*border-radius: 10px;*/
+}
+
+#tablePrices1 tr:nth-child(26) td:nth-child(2):before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -1px;
+  left:-1px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(1px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  /*border-radius: 10px;*/
+}
+
+#tablePrices1 tr:nth-child(26) td:nth-child(2):after {
+  background: transparent;
+}
+
+#tablePrices1 tr:nth-child(26) td:nth-child(2):before {
+  opacity: 1;
+}
+
+#tablePrices1 tr:nth-child(26) td:nth-child(2):after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: black;
+  /* background: #ffff; #111;*/
+  left: 0;
+  top: 0;
+  /*border-radius: 10px;*/
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/****************************************************/
+
+
